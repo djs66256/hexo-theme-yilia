@@ -89,8 +89,13 @@
       url: config.url+url_for(post.path)
     }) %>
   <% } else { %>
-    <div class="duoshuo"></div>
+    <!-- <div class="duoshuo"></div> -->
   <% } %>
+  <%- partial('post/youyan', {
+      key: post.slug,
+      title: post.title,
+      url: config.url+url_for(post.path)
+    }) %>
 <% } %>
 
 <% if (!index && post.comments && config.disqus_shortname){ %>
